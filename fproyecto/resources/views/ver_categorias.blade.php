@@ -6,14 +6,12 @@
             <table class="table table-hover table-bordered table-responsive table-striped">
                 <thead class="bg-info">
                     <tr>
-                        <td>Rut</td>
                         <td>Nombre</td>
-                        <td>Direccion</td>
-                        <td>Teléfono</td>
+                        <td>Descripción</td>
                         <td>Acciones</td>
                     </tr>
                 </thead>
-                <tbody id="tbody-cliente"></tbody>
+                <tbody id="tbody-categoria"></tbody>
 
             </table>
 
@@ -22,6 +20,6 @@
 @endsection
 
 @section("javascript")
-    <script src="{{asset('js/servicios/clientesService.js')}}"></script>
-    <script src="{{asset('js/ver_clientes.js')}}"></script>
+    <script src="{{asset('js/servicios/categoriasService.js')}}"></script>
+    <script src="{{asset('js/ver_categorias.js')}}"></script>
 @endsection

@@ -6,24 +6,20 @@
         <div class="col-lg5 col-md-6 col-sm-12 mx-auto">
             <div class="card">
                 <div class="card-header bg-success text-white">
-                    <span>Registrar Cliente</span>
+                    <span>Registrar Producto</span>
                 </div>
                 <div class="card-body">
-                    <div class="mb-3">
-                        <label for="rut-txt" class="form-label">Rut</label>
-                        <input type="text" id="rut-txt" class="form-control">
-                    </div>
                     <div class="mb-3">
                         <label for="nombre-txt" class="form-label">Nombre</label>
                         <input type="text" id="nombre-txt" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="direccion-txt" class="form-label">Dirección</label>
-                        <input type="text" id="direccion-txt" class="form-control">
+                        <label for="descripcion-txt" class="form-label">Descripción</label>
+                        <input type="text" id="descripcion-txt" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="telefono-txt" class="form-label">Teléfono</label>
-                        <input type="text" id="telefono-txt" class="form-control">
+                        <label for="precio-txt" class="form-label">Precio</label>
+                        <input type="number" id="precio-txt" class="form-control">
                     </div>
                 </div>
                 <div class="card-footer">
@@ -35,6 +31,6 @@
 
 @endsection
 @section("javascript")
-    <script src="{{asset('js/servicios/clientesService.js')}}"></script>
-    <script src="{{asset('js/agregar_cliente.js')}}"></script>
+    <script src="{{asset('js/servicios/productosService.js')}}"></script>
+    <script src="{{asset('js/agregar_producto.js')}}"></script>
 @endsection
