@@ -4,8 +4,8 @@
 
     <div class="row mt-5">
         <div class="col-lg-5 col-md-6 col-sm-12 mx-auto">
-            <div class="card">
-                <div class="card-header bg-success text-white">
+            <div class="card bg-dark text-white">
+                <div class="card-header bg-secondary text-white">
                     <span>Registrar Empleado</span>
                 </div>
                 <div class="card-body">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-info" id="registrar-btn" type="button">Registrar</button>
+                    <button class="btn btn-primary" id="registrar-btn" type="button">Registrar</button>
                 </div>
             </div>
         </div>

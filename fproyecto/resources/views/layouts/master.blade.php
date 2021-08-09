@@ -8,14 +8,15 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <title>La Obra</title>
+    <title>LA OBRA</title>
   </head>
-  <body>
+  <body background="{{asset('img/fondo.jpg')}}">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-success bg-gradient">
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning bg-gradient">
             <div class="container-fluid">
                 <a class="navbar-brand text-dark active" href="{{route('home')}}">
-                    <img class="logo img-fluid" src="{{asset('img/logo.png')}}">LA OBRA
+                    <img class="logo img-fluid" src="{{asset('img/logo.png')}}">
+                    <img class="logo img-fluid" src="{{asset('img/logotexto.png')}}">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,12 +26,12 @@
                   <a class="nav-link text-dark" aria-current="page" href="{{route('home')}}">Inicio</a>
                   <a class="nav-link text-dark" href="{{route('agregar_cliente')}}">Agregar cliente</a>
                   <a class="nav-link text-dark" href="{{route('ver_clientes')}}">Ver clientes</a>
-                  <a class="nav-link text-dark" href="{{route('agregar_categoria')}}">Agregar categoria</a>
-                  <a class="nav-link text-dark" href="{{route('ver_categorias')}}">Ver categorias</a>
                   <a class="nav-link text-dark" href="{{route('agregar_empleado')}}">Agregar empleado</a>
                   <a class="nav-link text-dark" href="{{route('ver_empleados')}}">Ver empleados</a>
                   <a class="nav-link text-dark" href="{{route('agregar_producto')}}">Agregar producto</a>
                   <a class="nav-link text-dark" href="{{route('ver_productos')}}">Ver productos</a>
+                  <a class="nav-link text-dark" href="{{route('agregar_categoria')}}">Agregar categoria</a>
+                  <a class="nav-link text-dark" href="{{route('ver_categorias')}}">Ver categorias</a>
                 </div>
               </div>
             </div>

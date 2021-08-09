@@ -4,8 +4,8 @@
 
     <div class="row mt-5">
         <div class="col-lg5 col-md-6 col-sm-12 mx-auto">
-            <div class="card">
-                <div class="card-header bg-success text-white">
+            <div class="card bg-dark text-white">
+                <div class="card-header bg-secondary text-white">
                     <span>Registrar Categoría de Productos</span>
                 </div>
                 <div class="card-body">
@@ -14,13 +14,12 @@
                         <input type="text" id="nombre-txt" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <!-- TODO: emplear TINYMCE -->
                         <label for="descripcion-txt" class="form-label">Descripción</label>
                         <input type="text" id="descripcion-txt" class="form-control">
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-info" id="registrar-btn" type="button">Registrar</button>
+                    <button class="btn btn-primary" id="registrar-btn" type="button">Registrar</button>
                 </div>
             </div>
         </div>
