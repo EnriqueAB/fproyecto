@@ -21,9 +21,27 @@ const actualizar = async function(){
     
     categoria.nombre = document.querySelector("#nombre-txt").value;
     categoria.descripcion = document.querySelector("#descripcion-txt").value;
-    await actualizarCategoria(categoria);
-    let categorias = await getCategorias();
-    cargarTabla(categorias);
+
+    let errores = [];
+
+    if(categoria.nombre===""){
+        errores.push("Debe ingresar un nombre")
+    }
+
+    if(categoria.descripcion===""){
+        errores.push("Debe ingresar una descripción")
+    }
+    if(errores.length == 0){
+        await actualizarCategoria(categoria);
+        let categorias = await getCategorias();
+        cargarTabla(categorias);
+    }else {
+        await Swal.fire({
+            title: "Error de ingreso",
+            icon: "warning",
+            html: errores.join("<br />")
+        });
+    };
 };
 
 const iniciarActualizacion = async function(){
