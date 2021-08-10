@@ -30,6 +30,13 @@ class CategoriasController extends Controller
         return "ok";
     }
 
+    public function obtenerPorId(Request $request){
+        $input = $request->all();
+        $id = $input["id"];
+        $categoria = Categoria::findOrFail($id);
+        return $categoria;
+    }
+
     public function actualizarCategoria(Request $request){
         $input = $request->all();
         $id = $input["id"];

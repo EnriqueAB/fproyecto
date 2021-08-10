@@ -8,7 +8,7 @@ document.querySelector("#registrar-btn").addEventListener("click", async ()=>{
 
     let errores = [];
     
-    console.log(rut.validate());
+    //TODO: Aplicar rutjs para validar rut
 
     if(nombre === ""){
         errores.push("Debe ingresar un nombre");

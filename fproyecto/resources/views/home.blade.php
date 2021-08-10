@@ -12,9 +12,9 @@
                     <h4>En está aplicación web se tiene acceso a las funciones básicas del manejo de entidades de la ferreteria, estas son:</h4>
                 </div>
                 <div class="card-footer">
-                    <h5> - Registro, actualización y eliminación de Clientes</h5>
-                    <h5> - Registro, actualización y eliminación de Empleados</h5>
-                    <h5> - Registro, actualización y eliminación de Productos</h5>
+                    <h5> - Registro y eliminación de Clientes</h5>
+                    <h5> - Registro y eliminación de Empleados</h5>
+                    <h5> - Registro y eliminación de Productos</h5>
                     <h5> - Registro, actualización y eliminación de Categorias de Productos</h5>
                 </div>
             </div>

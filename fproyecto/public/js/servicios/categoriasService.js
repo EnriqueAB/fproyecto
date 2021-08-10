@@ -14,6 +14,11 @@ const crearCategoria = async(categoria)=>{
     return resp.data;
 };
 
+const findById = async (id)=>{
+    let resp = await axios.get(`api/categorias/findById?id=${id}`);
+    return resp.data;
+}
+
 const eliminarCategoria = async(id)=>{
     try{
         let resp = await axios.post("api/categorias/delete", {id}, {
@@ -26,3 +31,17 @@ const eliminarCategoria = async(id)=>{
         return false;
     }
 };
+
+const actualizarCategoria = async(categoria)=>{
+    try{
+        let resp = await axios.post("api/categorias/actualizar", categoria, {
+            headers:{
+                "Content-Type": "application/json"
+            }
+        });
+        return resp.data;
+    }catch(e){
+        return false;
+    }
+    
+}

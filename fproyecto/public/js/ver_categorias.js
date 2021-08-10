@@ -15,6 +15,26 @@ const iniciarEliminacion = async function(){
         Swal.fire("Cancelado","Cancelado a peticion del usuario", "info");
     }
 };
+const actualizar = async function(){
+    let idCategoria = this.idCategoria;
+    let categoria = await findById(idCategoria);
+    
+    categoria.nombre = document.querySelector("#nombre-txt").value;
+    categoria.descripcion = document.querySelector("#descripcion-txt").value;
+    await actualizarCategoria(categoria);
+    let categorias = await getCategorias();
+    cargarTabla(categorias);
+};
+
+const iniciarActualizacion = async function(){
+    let idCategoria = this.idCategoria;
+    let categoria = await findById(idCategoria);
+    document.querySelector("#nombre-txt").value = categoria.nombre;
+    document.querySelector("#descripcion-txt").value = categoria.descripcion;
+    document.querySelector("#actualizar-btn").idCategoria = idCategoria;
+    document.querySelector("#actualizar-btn").addEventListener("click",actualizar);
+    
+}
 
 const cargarTabla = (categorias)=>{
     let tbody = document.querySelector("#tbody-categoria");
@@ -27,17 +47,23 @@ const cargarTabla = (categorias)=>{
         tdDescripcion.innerText = categorias[i].descripcion;
         let tdAcciones = document.createElement("td");
 
+        let botonActualizar = document.createElement("button");
+        botonActualizar.innerText = "Actualizar";
+        botonActualizar.classList.add("btn","btn-success");
+        botonActualizar.idCategoria = categorias[i].id;
+        botonActualizar.addEventListener("click", iniciarActualizacion);
         let botonEliminar = document.createElement("button");
         botonEliminar.innerText = "Eliminar";
         botonEliminar.classList.add("btn","btn-danger");
         botonEliminar.idCategoria = categorias[i].id;
         botonEliminar.addEventListener("click", iniciarEliminacion);
         tdAcciones.appendChild(botonEliminar);
+        tdAcciones.appendChild(botonActualizar);
         
         tr.appendChild(tdNombre);
         tr.appendChild(tdDescripcion);
         tr.appendChild(tdAcciones);
-
+        
         tbody.appendChild(tr);
     }
 };

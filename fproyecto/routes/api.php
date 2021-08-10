@@ -32,6 +32,7 @@ Route::get("categorias/get", [CategoriasController::class, "getCategorias"]);
 Route::post("categorias/post", [CategoriasController::class, "crearCategoria"]);
 Route::post("categorias/actualizar", [CategoriasController::class, "actualizarCategoria"]);
 Route::post("categorias/delete", [CategoriasController::class, "eliminarCategoria"]);
+Route::get("categorias/findById", [CategoriasController::class, "obtenerPorId"]);
 
 //Empleados
 Route::get("empleados/get", [EmpleadosController::class, "getEmpleados"]);
